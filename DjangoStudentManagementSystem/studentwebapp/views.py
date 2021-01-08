@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
  
-from student_management_app.EmailBackEnd import EmailBackEnd
+from studentwebapp.EmailBackEnd import EmailBackEnd
  
  
 def home(request):

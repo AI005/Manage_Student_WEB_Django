@@ -1,6 +1,7 @@
 from django.urls import path, include
 from . import views
-from .import HodViews, StaffViews, StudentViews
+from .import HodViews
+#from .import HodViews, StaffViews, StudentViews
  
  
 urlpatterns = [
@@ -42,16 +43,8 @@ urlpatterns = [
     path('delete_subject/&lt;subject_id&gt;/', HodViews.delete_subject, name="delete_subject"),
     path('check_email_exist/', HodViews.check_email_exist, name="check_email_exist"),
     path('check_username_exist/', HodViews.check_username_exist, name="check_username_exist"),
-    path('student_feedback_message/', HodViews.student_feedback_message, name="student_feedback_message"),
-    path('student_feedback_message_reply/', HodViews.student_feedback_message_reply, name="student_feedback_message_reply"),
-    path('staff_feedback_message/', HodViews.staff_feedback_message, name="staff_feedback_message"),
-    path('staff_feedback_message_reply/', HodViews.staff_feedback_message_reply, name="staff_feedback_message_reply"),
-    path('student_leave_view/', HodViews.student_leave_view, name="student_leave_view"),
-    path('student_leave_approve/&lt;leave_id&gt;/', HodViews.student_leave_approve, name="student_leave_approve"),
-    path('student_leave_reject/&lt;leave_id&gt;/', HodViews.student_leave_reject, name="student_leave_reject"),
-    path('staff_leave_view/', HodViews.staff_leave_view, name="staff_leave_view"),
-    path('staff_leave_approve/&lt;leave_id&gt;/', HodViews.staff_leave_approve, name="staff_leave_approve"),
-    path('staff_leave_reject/&lt;leave_id&gt;/', HodViews.staff_leave_reject, name="staff_leave_reject"),
+
+
     path('admin_view_attendance/', HodViews.admin_view_attendance, name="admin_view_attendance"),
     path('admin_get_attendance_dates/', HodViews.admin_get_attendance_dates, name="admin_get_attendance_dates"),
     path('admin_get_attendance_student/', HodViews.admin_get_attendance_student, name="admin_get_attendance_student"),
