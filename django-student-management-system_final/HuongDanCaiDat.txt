@@ -1,0 +1,99 @@
+Cách cài đặt các file và chạy chương trình
+
+- Yêu cầu
++ Python phiên bản 3.x
+[ https://www.python.org/downloads/ ]
+
+3. Tải pip
+[ https://pip.pypa.io/en/stable/installing/ ]
+
+
+### Installation
+**1. Tạo folder chứa project
+
+**2. Cài đặt môi trường ảo (có thể có hoặc không)
+- Đầu tiên tải môi trường ảo về
+$  pip install virtualenv
+
+- Tiếp theo, tạo môi trường ảo
+
+Đối với Window
+```
+$  python -m venv venv
+```
+
+Đối với Mac/Linux
+```
+$  python3 -m venv venv
+```
+
+Activate Virtual Environment
+
+Đối với Windows
+```
+$  source venv/scripts/activate
+```
+
+Đối với Mac/Linux
+```
+$  source venv/bin/activate
+```
+
+
+```
+
+Sau đó vào project
+```
+$  cd django-student-management-system
+```
+
+**4. Tải các thư viện cần thiết trong file 'requirements.txt'**
+```python
+$  pip install -r requirements.txt
+```
+
+**5. Add the hosts**
+
+- vào file settings.py
+- Sau đó thêm đoạn code sau (Nếu đã có thì bỏ qua bước này): 
+```python
+ALLOWED_HOSTS = ['*']
+```
+**6. Tải template
+Vào link https://github.com/AI005/template_adminlte.git tải template này về, sau đó copy thư mục `static` bỏ vào project
+
+**7. Run Server**
+
+Command for window:
+```python
+$ python manage.py runserver
+```
+
+Command for Mac/Linux:
+```python
+$ python3 manage.py runserver
+```
+
+**7. Login Credentials**
+
+Create Super User (HOD)
+```
+$  python manage.py createsuperuser
+```
+Then Add Email, Username and Password
+
+**or Use Default Credentials**
+
+*For HOD /SuperAdmin*
+Email: admin@gmail.com
+Password: admin
+
+*For Staff*
+Email: staff@gmail.com
+Password: staff
+
+*For Student*
+Email: student@gmail.com
+Password: student
+
+
